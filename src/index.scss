@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    font-family: "Helvetica";
+}
+
+:root {
+    --background-clg: #cdc1ff;
+    --primary-clg: #e5d9f2;
+    --secondary-clg: #a594f9;
+    --third-clg: #f5efff;
+    --third-clg-greener: #bff3b3;
+    --fourth-clg: rgb(164, 220, 90);
+    --fifth-clg: #d2e0fb;
+    --sixth-clg: #E5E1DA;
+}

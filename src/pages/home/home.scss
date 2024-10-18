@@ -1,0 +1,265 @@
+@import "../../index.scss";
+
+.homeWrapper {
+    display: flex;
+    height: 100%;
+    width: 90vw;
+    margin: 0 auto;
+    .middleSide {
+        flex: 3;
+        padding: 10px 0;
+        box-sizing: border-box;
+        // background-color: red;
+        .filterBox {
+            width: 70%;
+            margin: 20px auto;
+            .radioWrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex: 1;
+
+                label {
+                    cursor: pointer;
+                    position: relative;
+                    margin: 0 5px;
+                    border: solid 1px rgba(0, 0, 0, 0.287);
+                    min-width: 35px;
+                    text-align: center;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    background-color: rgba(255, 255, 255, 0.456);
+                    &:active {
+                        transform: translate(1px, 1px);
+                    }
+                }
+                input {
+                    display: none;
+                }
+                input:checked + label {
+                    border: solid 1px black;
+                    background-color: var(--secondary-clg);
+                    color: white;
+                }
+            }
+            input:checked + label + .radioWrapper {
+                border-color: blue; /* Change this to the color you prefer */
+                font-weight: bold; /* Optional: make the selected label bold */
+                background-color: rgba(0, 0, 255, 0.1); /* Optional: add background color */
+                border-radius: 5px; /* Optional: add border radius */
+            }
+        }
+        .listPost {
+            width: 70%;
+            // background-color: blue;
+            margin: 0 auto;
+            .wrapPost {
+                padding: 10px;
+                .postWrapper {
+                    background-color: var(--secondary-clg);
+                    padding: 15px;
+                    border-radius: 10px;
+                    border: solid rgba(0, 0, 0, 0.357) 1px;
+                    margin-bottom: 10px;
+                    transition: 0.5s;
+                    h1 {
+                        margin-top: unset;
+                    }
+                    .donationWrapper {
+                        .donationValue {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                        .donationProcessBarWrapper {
+                            width: 100%;
+                            height: 6px;
+                            background-color: gray;
+                            padding: 2px;
+                            border-radius: 5px;
+                            display: flex;
+                            align-items: center;
+                            .donationProcessBar {
+                                width: 80%;
+                                background-color: var(--fourth-clg);
+                                height: 4px;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                    .memberWrapper {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        h3 {
+                            margin-bottom: unset;
+                        }
+                        .memberValue {
+                            display: flex;
+                            align-items: center;
+                            p {
+                                margin-right: 10px;
+                            }
+                            .userIcon {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                    .descriptionWrapper {
+                        .descriptionValue {
+                            display: -webkit-box; /* Use a flexbox model (for truncation purposes) */
+                            -webkit-box-orient: vertical; /* Define the orientation as vertical */
+                            overflow: hidden; /* Hide the overflowing content */
+                            text-overflow: ellipsis; /* Display ellipsis at the end */
+                            -webkit-line-clamp: 5;
+                        }
+                    }
+                    .seeMore {
+                        text-decoration: underline;
+                        font-style: italic;
+                        color: rgb(0, 76, 255);
+                        cursor: pointer;
+                        &:active {
+                            transform: translate(1px, 1px);
+                        }
+                    }
+                    .handleAction {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        margin-top: 10px;
+                        p {
+                            margin: unset;
+                        }
+                        .joinWrapper,
+                        .donateWrapper,
+                        .likeWrapper {
+                            &:active {
+                                transform: translate(1px, 1px);
+                            }
+                        }
+                        .joinWrapper {
+                            flex: 3;
+                            padding: 10px;
+                            background-color: var(--fourth-clg);
+                            text-align: center;
+                            border-radius: 5px;
+                            color: white;
+                            cursor: pointer;
+                        }
+                        .donateWrapper {
+                            flex: 2;
+                            padding: 10px;
+                            background-color: var(--fifth-clg);
+                            text-align: center;
+                            border-radius: 5px;
+                            color: white;
+                            cursor: pointer;
+                        }
+                        .likeWrapper {
+                            flex: 1;
+                            text-align: center;
+                            padding: 10px;
+                            background-color: var(--sixth-clg);
+                            text-align: center;
+                            border-radius: 5px;
+                            color: white;
+                            cursor: pointer;
+                        }
+                        .isLike {
+                            color: rgb(247, 97, 122) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .leftSide {
+        flex: 1;
+        padding: 20px;
+        .actWrapper {
+            display: flex;
+            flex-direction: column;
+            .listAct {
+                .donated {
+                    background-color: var(--sixth-clg);
+                }
+                .liked {
+                    background-color: var(--fifth-clg);
+                }
+                .joined {
+                    background-color: var(--third-clg);
+                }
+                .actDetailWrapper {
+                    margin: 10px 0px;
+                    width: 100%;
+                    border-radius: 10px;
+                    border: solid 1px rgba(0, 0, 0, 0.294);
+                    overflow: hidden;
+                    .actTime {
+                        font-style: italic;
+                    }
+                    .actContent {
+                        padding: 10px;
+                        box-sizing: border-box;
+                    }
+                    .toProject {
+                        a {
+                            padding: 5px;
+                            text-align: center;
+                            width: 100%;
+                            background-color: var(--background-clg);
+                            display: block;
+                            border-top: solid 1px rgba(0, 0, 0, 0.294);
+                            font-size: 20px;
+                            color: black;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .rightSide {
+        flex: 1;
+        padding: 20px;
+        .listDonate{
+            display: flex;
+            flex-direction: column;
+            .donateDetail{
+                margin: 5px 0;
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                border: black solid 1px;
+                border-radius: 10px;
+                overflow: hidden;
+                .donateTop{
+                    display: flex;
+                    align-items: center;
+                    .rank{
+                        text-align: center;
+                        padding: 10px;
+                        flex: 1 1 30%;
+                        font-size: 20px;
+                        border-right: solid 1px black;
+                        // background-color: var(--sixth-clg);
+                    }
+                    .donateName{
+                        flex: 1 1 70%;
+                        padding-left: 10px;
+                        text-align: center;
+                    }
+                }
+                .donateBottom{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 5px;
+                    font-size: 20px;
+                    border-top: black solid 1px;
+                }
+            }
+        }
+    }
+}
