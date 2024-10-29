@@ -7,3 +7,8 @@ export const toUSD = (value, maximumFractionDigits = 2) => {
         maximumFractionDigits: maximumFractionDigits,
     });
 };
+
+export const checkFormFieldEmpty = (str) => {
+    if (str.length === 0) return true;
+    return false;
+};

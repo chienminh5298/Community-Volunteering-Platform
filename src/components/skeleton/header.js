@@ -14,9 +14,12 @@ const Header = () => {
         navigate("/login");
     };
 
+    const handleGoDashboard = () => {
+        navigate("/");
+    };
     return (
         <div className="header">
-            <div className="headerLogo">
+            <div className="headerLogo" onClick={handleGoDashboard}>
                 <img src={logo} alt="Logo" />
                 <p>VOLUNTEERING PLATFORM</p>
             </div>

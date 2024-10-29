@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./login.scss";
 import sideLogo from "../../asset/2.png";
 import { Link } from "react-router-dom";
+import SignIn from "./signIn";
+import SignUp from "./signUp";
 
 const Login = () => {
+    const [isCreateAcctount, setIsCreateAccount] = useState(false);
     return (
         <div className="wrapper">
             <div className="leftSide">
@@ -26,12 +29,7 @@ const Login = () => {
             </div>
             <div className="rightSide">
                 <div className="loginWrapper">
-                    <form>
-                        <h2>Welcome back!</h2>
-                        <input type="text" placeholder="Username" />
-                        <input type="password" placeholder="Password" />
-                        <button type="submit">Login</button>
-                    </form>
+                    {isCreateAcctount ? <SignUp setIsCreateAccount={setIsCreateAccount}/> : <SignIn />}
                     <div className="resetAccount">
                         <ul>
                             <li>
@@ -43,6 +41,15 @@ const Login = () => {
                             <li>
                                 <Link to="#">Need help?</Link>
                             </li>
+                            {isCreateAcctount ? (
+                                <li onClick={() => setIsCreateAccount(false)}>
+                                    <Link to="#">Sign in</Link>
+                                </li>
+                            ) : (
+                                <li onClick={() => setIsCreateAccount(true)}>
+                                    <Link to="#">Create account</Link>
+                                </li>
+                            )}
                         </ul>
                     </div>
                 </div>
