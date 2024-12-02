@@ -1,0 +1,135 @@
+{
+    "account": {
+        "chienminh5298": {
+            "firstname": "chien",
+            "lastname": "nguyen",
+            "password": "1234"
+        },
+        "lynnchen": {
+            "firstname": "lynn",
+            "lastname": "chen",
+            "password": "test1234"
+        }
+    },
+    "post": {
+        "2425": {
+            "id": 2425,
+            "title": "Build the house",
+            "donateValue": 10000,
+            "donateTarget": 100000,
+            "member": 30,
+            "memberTarget": 250,
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+            "joiner": [
+                "chienminh5298"
+            ],
+            "liker": [
+                "chienminh5298"
+            ],
+            "comment": [
+                {
+                    "username": "chienminh5298",
+                    "content": "Hello everyone"
+                }
+            ]
+        },
+        "2426": {
+            "id": 2426,
+            "title": "Clean the park",
+            "donateValue": 5000,
+            "donateTarget": 50000,
+            "member": 20,
+            "memberTarget": 100,
+            "description": "A community effort to clean and beautify our local park. Let's come together and make a difference!",
+            "joiner": [
+                "john_doe",
+                "jane_doe"
+            ],
+            "liker": [
+                "john_doe"
+            ],
+            "comment": [
+                {
+                    "username": "jane_doe",
+                    "content": "Looking forward to joining this project!"
+                }
+            ]
+        },
+        "2427": {
+            "id": 2427,
+            "title": "Plant trees in the neighborhood",
+            "donateValue": 15000,
+            "donateTarget": 80000,
+            "member": 40,
+            "memberTarget": 200,
+            "description": "Join us in planting trees to improve air quality and beautify our neighborhood. Together, we can make a greener future!",
+            "joiner": [
+                "green_enthusiast",
+                "nature_lover"
+            ],
+            "liker": [
+                "green_enthusiast",
+                "nature_lover"
+            ],
+            "comment": [
+                {
+                    "username": "nature_lover",
+                    "content": "Excited to participate in this amazing initiative!"
+                },
+                {
+                    "username": "green_enthusiast",
+                    "content": "This is a great cause. Can't wait to start planting!"
+                }
+            ]
+        },
+        "2428": {
+            "id": 2428,
+            "title": "Food drive for the homeless",
+            "donateValue": 20000,
+            "donateTarget": 120000,
+            "member": 50,
+            "memberTarget": 300,
+            "description": "Help us collect and distribute food to those in need. Your contributions will make a huge impact in our community.",
+            "joiner": [
+                "volunteer123",
+                "food_donor"
+            ],
+            "liker": [
+                "food_donor"
+            ],
+            "comment": [
+                {
+                    "username": "volunteer123",
+                    "content": "Happy to contribute to this noble cause."
+                }
+            ]
+        },
+        "2429": {
+            "id": 2429,
+            "title": "Support animal shelter",
+            "donateValue": 8000,
+            "donateTarget": 60000,
+            "member": 15,
+            "memberTarget": 75,
+            "description": "Join us in supporting our local animal shelter. Your donations and time can help provide food, shelter, and medical care for animals in need.",
+            "joiner": [
+                "pet_lover",
+                "animal_friend"
+            ],
+            "liker": [
+                "pet_lover",
+                "animal_friend"
+            ],
+            "comment": [
+                {
+                    "username": "pet_lover",
+                    "content": "Animals deserve our love and care!"
+                },
+                {
+                    "username": "animal_friend",
+                    "content": "A great initiative for our furry friends."
+                }
+            ]
+        }
+    }
+}

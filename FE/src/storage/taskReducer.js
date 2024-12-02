@@ -1,42 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    data: {
-        2424: {
-            id: 2424,
-            title: "Raise the wood",
-            donateValue: 24223,
-            donateTarget: 100000,
-            member: 24,
-            memberTarget: 250,
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            joiner: ["chienminh5298"],
-            liker: ["chienminh5298"],
-            comment: [
-                {
-                    username: "chienminh5298",
-                    content: "Hello everyone",
-                },
-            ],
-        },
-        2425: {
-            id: 2425,
-            title: "Build the house",
-            donateValue: 10000,
-            donateTarget: 100000,
-            member: 30,
-            memberTarget: 250,
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            joiner: ["chienminh5298"],
-            liker: ["chienminh5298"],
-            comment: [
-                {
-                    username: "chienminh5298",
-                    content: "Hello everyone",
-                },
-            ],
-        },
-    },
+    data: {},
     activities: [
         {
             type: "joined",
@@ -68,7 +33,7 @@ const taskSlice = createSlice({
     initialState: initialState,
     reducers: {
         fetch: (state, action) => {
-            state.data = action.payload;
+            state.data = action.payload.data;
         },
         unlike: (state, action) => {
             const id = action.payload.id;
@@ -120,6 +85,10 @@ const taskSlice = createSlice({
         },
         fetchActivities: (state, action) => {
             state.activities = action.payload;
+        },
+        addPost: (state, action) => {
+            const data = action.payload.data.data
+            state.data[data.id] = data;
         },
     },
 });

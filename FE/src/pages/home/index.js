@@ -15,11 +15,10 @@ const Home = () => {
     const dispatch = useDispatch();
     const { data: postData, isFetching } = useQuery({
         queryFn: async () => {
-            await axios.get(`${BACKEND_URL}/allPost`);
+            return await axios.get(`${BACKEND_URL}/allPost`);
         },
         queryKey: [`fetchData`],
         staleTime: 30000,
-        enabled: Object.values(posts).length === 0,
     });
 
     useEffect(() => {

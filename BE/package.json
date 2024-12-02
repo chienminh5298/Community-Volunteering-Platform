@@ -1,0 +1,21 @@
+{
+  "name": "community-volunteering-platform",
+  "version": "1.0.0",
+  "description": "A platform to improve community connectedness and mutual aid. This application would reduce social inequality by promoting community engagement and participation in need-based reciprocal support. Volunteers and organizations will be able to post and discover volunteering opportunities based on skills and interests, as well as create profiles, view role-specific dashboards, search and filter options for volunteering opportunities, and interact with posts.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

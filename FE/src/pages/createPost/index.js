@@ -2,19 +2,27 @@ import React, { useState } from "react";
 import "./index.scss";
 import { checkFormFieldEmpty } from "../../ultil";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { BACKEND_URL } from "../../setting";
+import { taskAction } from "../../storage/taskReducer";
+
 const CreatePost = () => {
     const navigator = useNavigate();
     const [isFormError, setIsFormError] = useState(false);
+    const dispatch = useDispatch();
+    const queryClient = useQueryClient();
 
     const { mutate } = useMutation({
         mutationFn: async (data) => {
-            await axios.post(`${BACKEND_URL}/createPost`, data);
+            const response = await axios.post(`${BACKEND_URL}/createPost`, data);
+            return response;
         },
-        onSuccess: () => {
+        onSuccess: (response) => {
+            dispatch(taskAction.addPost(response));
+            queryClient.invalidateQueries(["fetchData"]);
             toast.success("Create post success !");
             navigator("/");
         },

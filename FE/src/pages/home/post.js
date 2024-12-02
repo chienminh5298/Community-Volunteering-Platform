@@ -6,7 +6,6 @@ import LikeComponent from "./likeComponent";
 import JoinComponent from "./joinComponent";
 
 const Post = ({ title, donateValue, donateTarget, memberValue, memberTarget, description, isJoin, isLike, isSkeleton = false, id }) => {
-
     if (isSkeleton) {
         return (
             <div className="postWrapper">
@@ -43,7 +42,7 @@ const Post = ({ title, donateValue, donateTarget, memberValue, memberTarget, des
                     <div className="donateWrapper skeleton">
                         <p>Donate</p>
                     </div>
-                    <LikeComponent isLike={isLike} isSkeleton={true} />
+                    <LikeComponent isLike={isLike} isSkeleton={true} id={id} />
                 </div>
             </div>
         );

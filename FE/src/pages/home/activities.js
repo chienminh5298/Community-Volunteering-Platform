@@ -36,19 +36,19 @@ const Activities = () => {
     const renderActivities = activities.map((act, idx) => {
         if (act.type === "joined") {
             return (
-                <div onClick={() => handleOnClick(2424)} key={idx}>
+                <div onClick={() => handleOnClick(act.projectId)} key={idx}>
                     <Activity date={act.date} content={""} username={act.username} project={act.title} action="joined" />
                 </div>
             );
         } else if (act.type === "liked") {
             return (
-                <div onClick={() => handleOnClick(2424)} key={idx}>
+                <div onClick={() => handleOnClick(act.projectId)} key={idx}>
                     <Activity date={act.date} content={""} username={act.username} project={act.title} action="liked" />
                 </div>
             );
         } else {
             return (
-                <div onClick={() => handleOnClick(2424)} key={idx}>
+                <div onClick={() => handleOnClick(act.projectId)} key={idx}>
                     <Activity date={act.date} content={toUSD(24233)} username={act.username} project={act.title} action="donated" />
                 </div>
             );

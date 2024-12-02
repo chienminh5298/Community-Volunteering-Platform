@@ -12,7 +12,8 @@ const SignIn = () => {
     const navigator = useNavigate();
     const { mutate } = useMutation({
         mutationFn: async (data) => {
-            await axios.post(`${BACKEND_URL}/signIn`, data);
+            const res = await axios.post(`${BACKEND_URL}/signIn`, data);
+            console.log(res)
         },
         onSuccess: () => {
             navigator("/");
